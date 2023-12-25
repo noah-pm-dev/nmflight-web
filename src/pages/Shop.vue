@@ -1,5 +1,7 @@
+<script setup lang="ts">
+import NavigationHeader from '../components/NavigationHeader.vue';
+</script>
+
 <template>
-    <button>
-      <router-link to="/">Home</router-link>
-    </button>
-  </template>
+    <NavigationHeader text="Shop" path="/" />
+</template>

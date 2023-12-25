@@ -1,47 +1,41 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue"
+import NavigationHeader from "../components/NavigationHeader.vue";
 </script>
 
 <template>
-    <div class="container">             
-        <router-link class="header" to="/">
-            <Icon icon="material-symbols:arrow-back-ios-new-rounded"></Icon>
-            <h1>
-                Portfolio
-            </h1>
-        </router-link>
+    <NavigationHeader text="Portfolio" path="/" />
+    <div class="sort-container">
+        <h2>
+            Sort by Tags
+        </h2>
+        <div class="tag-select-box"></div>
     </div>
 </template>
 
 <style scoped>
-.container {
+.left {
     display: flex;
     justify-content: left;
     align-items: center;
+    height: 10vh;
 }
 
-.header {
+.sort-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 11vh;
-    text-decoration: none;
-    color: black;
-    transition: 0.3s;
+    margin-left: 3vw;
 }
 
-.header:hover {
-    scale: 1.09;
+h2 {
+    font-family: 'bree';
+    font-size: 2.6vh;
 }
 
-svg {
-    font-size: 5vh;
-}
-
-h1 {
-    font-family: 'Bree';
-    font-size: 10vh;
-    margin-left: 2vw;
+.tag-select-box {
+    width: 20vw;
+    height: 70vh;
+    background-color: #000000;
 }
 </style>
